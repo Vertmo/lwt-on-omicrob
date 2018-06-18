@@ -1,0 +1,6 @@
+[submodule "OMicroB"]
+	path = OMicroB
+	url = https://github.com/Vertmo/OMicroB
+[submodule "lwt"]
+	path = lwt
+	url = https://github.com/ocsigen/lwt
