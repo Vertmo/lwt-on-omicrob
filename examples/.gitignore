@@ -1,0 +1,12 @@
+**/*.o
+**/*.cmi
+**/*.cmo
+**/*.cmx
+**/*.cma
+**/*.cmxa
+**/*.byte
+**/*.native
+**/*.elf
+**/*.avr
+**/*.hex
+**/*.elf.dSYM
