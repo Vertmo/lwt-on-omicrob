@@ -1,16 +1,16 @@
 include ../../OMicroB/etc/Makefile.conf
 
-TARGETS = basic.byte basic.c basic.elf basic.avr basic.hex
+TARGETS = vowels.byte vowels.c vowels.elf vowels.avr vowels.hex
 
 all: $(TARGETS)
 
-$(TARGETS): basic.ml
-	$(BIN)/omicrob -v basic.ml -mlopts lwt/lwt.cma,lwt/unix/lwt_unix.cma,-I,lwt,-I,lwt/unix -stack-size 256 -heap-size 1000
+$(TARGETS): vowels.ml
+	$(BIN)/omicrob -v vowels.ml -mlopts lwt/lwt.cma,lwt/unix/lwt_unix.cma,-I,lwt,-I,lwt/unix -stack-size 256 -heap-size 1000
 
-flash: basic.hex
+flash: vowels.hex
 	$(BIN)/omicrob -flash -sudo $<
 
-simul: basic.elf
+simul: vowels.elf
 	./$< '../../OMicroB/bin/omicrob_pin_simulator' '../../OMicroB/bin/omicrob_circuit_simulator circuit.txt'
 
 
