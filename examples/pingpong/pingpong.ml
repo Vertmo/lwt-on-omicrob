@@ -10,8 +10,8 @@ let activatePins () =
   )
 
 let rec pingpong () =
-  Lwt.return (digital_write r HIGH; delay 1000; digital_write r LOW) >>=
-  (fun () -> Lwt.return (digital_write g HIGH; delay 1000; digital_write g LOW) >>= pingpong)
+  Lwt.return (digital_write r HIGH; delay 500; digital_write r LOW) >>=
+  (fun () -> Lwt.return (digital_write g HIGH; delay 500; digital_write g LOW) >>= pingpong)
 
 let () =
   Lwt_main.run (activatePins () >>= pingpong)
